@@ -1,3 +1,4 @@
+import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -10,7 +11,12 @@ public class HomeScreenGraphic {
 	TextField homeTF = new TextField("Enter Name");
 	Text homeText = new Text("GAME!");
 	String playerName;
+	Group root;
 
+	public Group getGroup() {
+		root = new Group(start,homeTF,homeText);
+		return root;
+	}
 	//Getters
 	public Button getStart() {
 		return start;
