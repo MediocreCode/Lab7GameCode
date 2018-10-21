@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 public class Driver extends Application {
 /*
  * Raleigh Dial
+ * Trevor Henry
  * 10/20
  */
 	public static void main(String[] args) {

@@ -4,6 +4,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 /*
  * Raleigh Dial
+ * Trevor Henry
  * 10/19
  */
 public class HomeScreenGraphic {
