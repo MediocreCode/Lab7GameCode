@@ -5,7 +5,7 @@ import javafx.scene.text.Text;
 /*
  * Raleigh Dial
  * Trevor Henry
- * 10/19
+ * 10/20
  */
 public class HomeScreenGraphic {
 	Button start = new Button("Start");
