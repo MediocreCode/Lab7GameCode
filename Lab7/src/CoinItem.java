@@ -23,8 +23,8 @@ public int genCoinY() {
 	return coinY;
 }
 public void makeCoin(java.awt.Graphics g) {
-	g.drawRect(genCoinX(), genCoinY(), w, h);
 	g.setColor(Color.WHITE);
+	g.drawRect(genCoinX(), genCoinY(), w, h);
 	
 }
 }
