@@ -34,7 +34,7 @@ public class Driver extends Application {
 
 	}
 	public void start(Stage primaryStage) throws Exception {
-		this.myStage = primaryStage;
+		//this.myStage = primaryStage;
 		
 		hsg.getHomeText();
 		hsg.getHomeTF();
@@ -57,15 +57,23 @@ public class Driver extends Application {
 		shep1.genCoinX();
 		shep1.genCoinY();
 		shep1.makeShep();
-		gameScene.getGroup(p1.getPlayerImg(),shep1.getShep());
+		shep2.genCoinX();
+		shep2.genCoinY();
+		shep2.makeShep();
+//		shep3.genCoinX();
+//		shep3.genCoinY();
+//		shep3.makeShep();
+//		shep4.genCoinX();
+//		shep4.genCoinY();
+//		shep4.makeShep();
+//		shep5.genCoinX();
+//		shep5.genCoinY();
+//		shep5.makeShep();
+		gameScene.getGroup(p1.getPlayerImg(),shep1.getShep(),shep2.getShep());
 		gameSceneScene = gameScene.getScene();
 		gameSceneScene.setOnKeyPressed(this::keyMove);
 		myStage.setScene(gameSceneScene);
-		if(areRectsColliding(p1.getX1(), p1.getX2(), p1.getY1(), p1.getY2(), shep1.getCoinX(), shep1.getW(), shep1.getCoinY(), shep1.getH())) {
-			gameScene.changeCounter();
-			System.out.println("Works!");
 		}
-	}
 	public void keyMove(KeyEvent event) {
 		KeyCode myCode = event.getCode();
 		if(myCode== KeyCode.A) {
@@ -80,21 +88,29 @@ public class Driver extends Application {
 		else if(myCode== KeyCode.S) {
 			p1.moveDown();
 		}
+		if(areRectsColliding(p1.getX1(), p1.getX2(), p1.getY1(), p1.getY2(), shep1.getCoinX(), shep1.getW(), shep1.getCoinY(), shep1.getH())) {
+			gameScene.changeCounter(name);
+			System.out.println("Works!1");
 	}
-	private boolean areRectsColliding(int r1TopLeftX, int
+		if(areRectsColliding(p1.getX1(), p1.getX2(), p1.getY1(), p1.getY2(), shep2.getCoinX(), shep2.getW(), shep2.getCoinY(), shep2.getH())) {
+			gameScene.changeCounter(name);
+			System.out.println("Works!2");
+	}
+	}
+	public boolean areRectsColliding(int r1TopLeftX, int
 			r1BottomRightX,int r1TopLeftY, int r1BottomRightY, int
 			r2TopLeftX,int r2BottomRightX, int r2TopLeftY, int
 			r2BottomRightY)
 			{
-			if (r1TopLeftX < r2BottomRightX && r1BottomRightX >
+		if (r1TopLeftX < r2BottomRightX && r1BottomRightX >
 			r2TopLeftX&& r1TopLeftY < r2BottomRightY && r1BottomRightY >
 			r2TopLeftY) 
 			{
-			return true;
+		return true;
 			}
-			else
-			{
-			return false;
-			}
-			}
+		else
+		{
+		return false;
+		}
+	}
 }

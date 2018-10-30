@@ -6,15 +6,14 @@ import javafx.scene.image.ImageView;
  */
 public class Player {
 
-		int x1=0;
-		int x2=32;
-		int y1=0;
-		int y2=32;
+		static int x1=0;
+		static int x2=32;
+		static int y1=0;
+		static int y2=32;
 		String playerName;
 		Image playerImg = new Image("file:src/Player.png");
 		ImageView playerView = new ImageView(playerImg);
 
-		//Takes player name from HomeScreen TextField
 public void moveRight() {
 	x1+=10;
 	x2+=10;

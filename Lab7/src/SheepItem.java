@@ -14,21 +14,21 @@ import javafx.scene.image.ImageView;
  */
 public class SheepItem {
 	Random r = new Random();
-	int coinX;
-	int coinY;
-	int h=15;
-	int w=15;
+	static int coinX;
+	static int coinY;
+	static int h=32;
+	static int w=32;
 	Image shepImg = new Image("file:src/Shep.png");
 	ImageView shepView = new ImageView(shepImg);
 //Gens coins X position	
 public void genCoinX() {
-	coinX = r.nextInt(751);
-	w = coinX + w;
+	coinX = r.nextInt(700);
+	w = (coinX + w);
 }
 //Gens coin Y position
 public void genCoinY() {
-	coinY = r.nextInt(501);
-	h = coinY + h;
+	coinY = r.nextInt(450);
+	h = (coinY + h);
 }
 public int getH() {
 	return h;

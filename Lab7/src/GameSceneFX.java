@@ -19,23 +19,23 @@ public class GameSceneFX {
 		return name;
 	}
 	public Text getText(String pName) {
-	this.pName = pName;
+	//this.pName = pName;
 	counter.setText(pName+": "+i);
 	counter.setLayoutX(0);
 	counter.setLayoutY(20);
 	counter.setStroke(Color.WHITE);
 	return counter;
 }
-	public Group getGroup(ImageView p1,ImageView shep) {
-		root = new Group(counter,p1,shep);
+	public Group getGroup(ImageView p1,ImageView shep1,ImageView shep2) {
+		root = new Group(counter,p1,shep1,shep2);
 		return root;
 	}
 	public Scene getScene() {
 		myScene = new Scene(root,750, 500, Color.BLACK);
 		return myScene;
 	}
-	public Text changeCounter() {
-		counter.setText(pName+": "+i++);
+	public Text changeCounter(String name) {
+		counter.setText(name+": "+i++);
 		return counter;
 	}
 }
