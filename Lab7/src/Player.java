@@ -1,21 +1,45 @@
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 /*
  * Raleigh Dial
- * 10/19
+ * 10/29
  */
 public class Player {
 
-		int x1;
-		int x2;
-		int y1;
-		int y2;
+		int x1=0;
+		int x2=32;
+		int y1=0;
+		int y2=32;
 		String playerName;
-		Image playerImg;
+		Image playerImg = new Image("file:src/Player.png");
+		ImageView playerView = new ImageView(playerImg);
 
 		//Takes player name from HomeScreen TextField
-public Player(String playerName) {
-	this.playerName = playerName;
+public void moveRight() {
+	x1+=10;
+	x2+=10;
+	playerView.setX(x1);
 }
+public void moveLeft() {
+	x1-=10;
+	x2-=10;
+	playerView.setX(x1);
+}
+public void moveUp() {
+	y1-=10;
+	y2-=10;
+	playerView.setY(y1);
+}
+public void moveDown() {
+	y1+=10;
+	y2+=10;
+	playerView.setY(y1);
+}
+public void setScale() {
+	playerView.setScaleX(1);
+	playerView.setScaleY(1);
+}
+
 		//Getters and Setters
 		public int getX1() {
 			return x1;
@@ -44,8 +68,8 @@ public Player(String playerName) {
 		public String getPlayerName() {
 			return playerName;
 		}
-		public Image getPlayerImg() {
-			return playerImg;
+		public ImageView getPlayerImg() {
+			return playerView;
 		}
 		public void setPlayerImg(Image playerImg) {
 			this.playerImg = playerImg;

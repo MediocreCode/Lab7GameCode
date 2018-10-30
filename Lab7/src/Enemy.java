@@ -3,7 +3,8 @@ import javafx.scene.image.Image;
 public class Enemy {
 /*
  * Raleigh Dial
- * 10/19
+ * 10/29
+ * 
  */
 	int x1;
 	int x2;
