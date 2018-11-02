@@ -1,4 +1,5 @@
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 public class Enemy {
 /*
@@ -6,12 +7,41 @@ public class Enemy {
  * 10/29
  * 
  */
-	static int x1;
-	int x2;
-	int y1;
-	int y2;
-	Image enemyImg;
+	int x1=600;
+	int x2=632;
+	int y1=400;
+	int y2=420;
+	Image enemyImg = new Image("file:src/Enemy.png");
+	ImageView enemyView = new ImageView(enemyImg);
 	//String enemyName; Does enemy need name?
+	
+	public void moveRight() {
+		x1+=10;
+		x2+=10;
+		enemyView.setX(x1);
+	}
+	public void moveLeft() {
+		x1-=10;
+		x2-=10;
+		enemyView.setX(x1);
+	}
+	public void moveUp() {
+		y1-=10;
+		y2-=10;
+		enemyView.setY(y1);
+	}
+	public void moveDown() {
+		y1+=10;
+		y2+=10;
+		enemyView.setY(y1);
+	}
+	public ImageView getEn() {
+		enemyView.setX(x1);
+		enemyView.setY(y1);
+		enemyView.setScaleX(.5);
+		enemyView.setScaleY(.5);
+		return enemyView;
+	}
 	
 	//Getters and Setters
 	public int getX1() {
@@ -40,8 +70,5 @@ public class Enemy {
 	}
 	public Image getEnemyImg() {
 		return enemyImg;
-	}
-	public void setEnemyImg(Image enemyImg) {
-		this.enemyImg = enemyImg;
 	}
 }

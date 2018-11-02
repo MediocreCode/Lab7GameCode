@@ -2,12 +2,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 /*
  * Raleigh Dial
- * 10/29
+ * 15/29
  */
 public class Player {
 
 		static int x1=0;
-		static int x2=32;
+		static int x2=20;
 		static int y1=0;
 		static int y2=32;
 		String playerName;
@@ -15,23 +15,23 @@ public class Player {
 		ImageView playerView = new ImageView(playerImg);
 
 public void moveRight() {
-	x1+=10;
-	x2+=10;
+	x1+=15;
+	x2+=15;
 	playerView.setX(x1);
 }
 public void moveLeft() {
-	x1-=10;
-	x2-=10;
+	x1-=15;
+	x2-=15;
 	playerView.setX(x1);
 }
 public void moveUp() {
-	y1-=10;
-	y2-=10;
+	y1-=15;
+	y2-=15;
 	playerView.setY(y1);
 }
 public void moveDown() {
-	y1+=10;
-	y2+=10;
+	y1+=15;
+	y2+=15;
 	playerView.setY(y1);
 }
 public void setScale() {

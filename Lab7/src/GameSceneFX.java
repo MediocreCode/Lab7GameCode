@@ -13,7 +13,9 @@ public class GameSceneFX {
 	static String pName;
 	Group root = new Group();
 	Scene myScene;
-	static int i= 0;
+	int i= 0;
+	String hs="";
+	Text hsText = new Text(hs);
 	
 	public String getName(String name) {
 		return name;
@@ -26,16 +28,20 @@ public class GameSceneFX {
 	counter.setStroke(Color.WHITE);
 	return counter;
 }
-	public Group getGroup(ImageView p1,ImageView shep1,ImageView shep2) {
-		root = new Group(counter,p1,shep1,shep2);
+	public Group getGroup(ImageView p1,ImageView shep1,ImageView bad) {
+		root = new Group(counter,p1,shep1,bad);
 		return root;
 	}
 	public Scene getScene() {
 		myScene = new Scene(root,750, 500, Color.BLACK);
 		return myScene;
 	}
-	public Text changeCounter(String name) {
+	public Text changeCounter(String name,int i) {
 		counter.setText(name+": "+i++);
 		return counter;
+	}
+	public String getHS() {
+		hs = hs+counter.getText()+"\n";
+		return hs;
 	}
 }

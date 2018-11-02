@@ -16,18 +16,20 @@ public class SheepItem {
 	Random r = new Random();
 	static int coinX;
 	static int coinY;
-	static int h=32;
-	static int w=32;
+	int h=32;
+	int w=32;
 	Image shepImg = new Image("file:src/Shep.png");
 	ImageView shepView = new ImageView(shepImg);
 //Gens coins X position	
 public void genCoinX() {
 	coinX = r.nextInt(700);
+	w = 32;
 	w = (coinX + w);
 }
 //Gens coin Y position
 public void genCoinY() {
 	coinY = r.nextInt(450);
+	h = 32;
 	h = (coinY + h);
 }
 public int getH() {

@@ -14,8 +14,9 @@ public class HomeScreenGraphic {
 	Text homeText = new Text("GAME!");
 	String playerName;
 	Group root;
+	Text hs=new Text();
 	public Group getGroup() {
-		root = new Group(start,homeTF,homeText);
+		root = new Group(start,homeTF,homeText,hs);
 		return root;
 	}
 	//Getters
@@ -38,5 +39,12 @@ public class HomeScreenGraphic {
 	public String getPlayerName() {
 		playerName = homeTF.getText();
 		return playerName;
+	}
+	public Text HighScore(String str) {
+		hs.setText(str);
+		hs.setLayoutX(250);
+		hs.setLayoutY(100);
+		hs.setStroke(Color.WHITE);
+		return hs;
 	}
 }
